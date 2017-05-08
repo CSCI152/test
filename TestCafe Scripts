@@ -1,0 +1,526 @@
+"@fixture ght1";
+"@page https://kyubi1098.000webhostapp.com/homepage.html";
+
+
+
+
+"@test"["test1"] = {
+    '1.Click span "Asian Food"': function() {
+        act.click(":containsExcludeChildren(Asian Food)");
+    },
+    '2.Click span "$$"': function() {
+        act.click("body > div:nth(1) > div:nth(0) > div:nth(1) > button:nth(1) > span:nth(0)");
+    },
+    '3.Click span "High"': function() {
+        act.click(":containsExcludeChildren(High)");
+    },
+    '4.Click span "25mi"': function() {
+        act.click(":containsExcludeChildren(25mi)");
+    },
+    '5.Type in input "Zipcode"': function() {
+        act.type("#locay", "93657");
+    },
+    "6.Click div": function() {
+        act.click("body > div:nth(2)");
+    },
+    "7.Click button": function() {
+        act.click("#output");
+    },
+    '8.Click span "Results!"': function() {
+        var actionTarget = function() {
+            return $("#get").find(":containsExcludeChildren(Results)");
+        };
+        act.click(actionTarget);
+    },
+    '9.Click span "Show next..."': function() {
+        act.click(":containsExcludeChildren(Show next restaurant)");
+    },
+    '10.Click span "Show next..."': function() {
+        act.click(":containsExcludeChildren(Show next restaurant)");
+    },
+    '11.Click span "Show next..."': function() {
+        act.click(":containsExcludeChildren(Show next restaurant)");
+    },
+    '12.Click span "Search again!"': function() {
+        act.click(":containsExcludeChildren(Search again)");
+    }
+};
+
+
+"@test"["test 2"] = {
+    '1.Click span "Fast Food"': function() {
+        act.click(":containsExcludeChildren(Fast Food)");
+    },
+    '2.Click span "$$"': function() {
+        act.click("body > div:nth(1) > div:nth(0) > div:nth(1) > button:nth(1) > span:nth(0)");
+    },
+    "3.Click submit button": function() {
+        act.click("#D");
+    },
+    '4.Click span "Asian Food"': function() {
+        act.click(":containsExcludeChildren(Asian Food)");
+    },
+    '5.Click span "Fast Food"': function() {
+        act.click(":containsExcludeChildren(Fast Food)");
+    },
+    '6.Click span "$"': function() {
+        act.click("body > div:nth(1) > div:nth(0) > div:nth(1) > button:nth(0) > span:nth(0)");
+    },
+    '7.Click span "Med."': function() {
+        act.click(":containsExcludeChildren(Med)");
+    },
+    "8.Click submit button": function() {
+        act.click("#twenty");
+    },
+    '9.Type in input "Zipcode"': function() {
+        act.type("#locay", "93650");
+    },
+    "10.Press key BACKSPACE": function() {
+        act.press("backspace");
+    },
+    "11.Press key BACKSPACE": function() {
+        act.press("backspace");
+    },
+    "12.Press key BACKSPACE": function() {
+        act.press("backspace");
+    },
+    "13.Press key BACKSPACE": function() {
+        act.press("backspace");
+    },
+    "14.Press key BACKSPACE": function() {
+        act.press("backspace");
+    },
+    '15.Type in input "Zipcode"': function() {
+        act.type("#locay", "93657");
+    },
+    "16.Click button": function() {
+        act.click("#output");
+    },
+    '17.Click span "Results!"': function() {
+        var actionTarget = function() {
+            return $("#get").find(":containsExcludeChildren(Results)");
+        };
+        act.click(actionTarget);
+    },
+    '18.Click span "Show next..."': function() {
+        act.click(":containsExcludeChildren(Show next restaurant)");
+    },
+    '19.Click span "Show next..."': function() {
+        act.click(":containsExcludeChildren(Show next restaurant)");
+    },
+    '20.Click span "Show next..."': function() {
+        act.click(":containsExcludeChildren(Show next restaurant)");
+    },
+    '21.Click span "Search again!"': function() {
+        act.click(":containsExcludeChildren(Search again)");
+    }
+};
+
+"@test"["test 3 inconsistent results"] = {
+    '1.Click span "Fast Food"': function() {
+        act.click(":containsExcludeChildren(Fast Food)");
+    },
+    '2.Click span "$$$"': function() {
+        act.click("body > div:nth(1) > div:nth(0) > div:nth(1) > button:nth(2) > span:nth(0)");
+    },
+    '3.Type in input "Zipcode"': function() {
+        act.type("#locay", "93657");
+    },
+    '4.Click span "Low"': function() {
+        act.click(":containsExcludeChildren(Low)");
+    },
+    '5.Click span "20mi"': function() {
+        act.click(":containsExcludeChildren(20mi)");
+    },
+    "6.Click div": function() {
+        act.click("body > div:nth(2)");
+    },
+    "7.Click div": function() {
+        act.click("body > div:nth(2)");
+    },
+    "8.Click list item": function() {
+        var actionTarget = function() {
+            return $(".category").find(" > ul:nth(0) > li:nth(1)");
+        };
+        act.click(actionTarget);
+    },
+    '9.Click span "Go"': function() {
+        act.click(":containsExcludeChildren(Go)");
+    },
+    '10.Click span "Results!"': function() {
+        var actionTarget = function() {
+            return $("#get").find(":containsExcludeChildren(Results)");
+        };
+        act.click(actionTarget);
+    },
+    '11.Click paragraph "No results found,..."': function() {
+        act.click("#firstName");
+    },
+    '12.Click span "Search again!"': function() {
+        act.click(":containsExcludeChildren(Search again)");
+    }
+};
+
+"@test"["test w yelp click"] = {
+    '1.Type in input "Zipcode"': function() {
+        act.type("#locay", "93704");
+    },
+    "2.Click image": function() {
+        act.click(".logo");
+    },
+    '3.Click span "High"': function() {
+        act.click(":containsExcludeChildren(High)");
+    },
+    "4.Click submit button": function() {
+        act.click("#twentyfive");
+    },
+    '5.Click span "Asian Food"': function() {
+        act.click(":containsExcludeChildren(Asian Food)");
+    },
+    '6.Click span "$$$"': function() {
+        act.click("body > div:nth(1) > div:nth(0) > div:nth(1) > button:nth(2) > span:nth(0)");
+    },
+    "7.Click button": function() {
+        act.click("#output");
+    },
+    '8.Click span "Results!"': function() {
+        var actionTarget = function() {
+            return $("#get").find(":containsExcludeChildren(Results)");
+        };
+        act.click(actionTarget);
+    },
+    '9.Click span "Show next..."': function() {
+        act.click(":containsExcludeChildren(Show next restaurant)");
+    },
+    '10.Click span "Show next..."': function() {
+        act.click(":containsExcludeChildren(Show next restaurant)");
+    },
+    '11.Click span "Show next..."': function() {
+        handleAlert();
+        act.click(":containsExcludeChildren(Show next restaurant)");
+    },
+    "12.Drag div": function() {
+        act.drag("#left", -273, 5, {
+            offsetX: 299,
+            offsetY: 110
+        });
+    },
+    '13.Click <b> "Click here"': function() {
+        act.click(":containsExcludeChildren(Click here)");
+    }
+};
+
+"@test"["no input?????? "] = {
+    "1.Click image": function() {
+        act.click(".logo");
+    },
+    '2.Click span "Go"': function() {
+        act.click(":containsExcludeChildren(Go)");
+    },
+    "3.Click button": function() {
+        act.click("#get");
+    },
+    '4.Click span "Results!"': function() {
+        var actionTarget = function() {
+            return $("#get").find(":containsExcludeChildren(Results)");
+        };
+        act.click(actionTarget);
+    },
+    '5.Click span "Results!"': function() {
+        var actionTarget = function() {
+            return $("#get").find(":containsExcludeChildren(Results)");
+        };
+        act.click(actionTarget);
+    },
+    "6.Click button": function() {
+        act.click("#get");
+    },
+    "7.Drag <h2> \"Click 'Results' to...\"": function() {
+        act.drag("#head1", 322, 7, {
+            offsetX: 478,
+            offsetY: 14
+        });
+    },
+    "8.Click body": function() {
+        act.click("body");
+    }
+};
+
+
+"@test"["no price and no food type"] = {
+    "1.Click submit button": function() {
+        var actionTarget = function() {
+            return $(".riskfactor").find(" > button:nth(0)");
+        };
+        act.click(actionTarget);
+    },
+    '2.Click span "25mi"': function() {
+        act.click(":containsExcludeChildren(25mi)");
+    },
+    '3.Type in input "Zipcode"': function() {
+        act.type("#locay", "937");
+    },
+    "4.Press key BACKSPACE": function() {
+        act.press("backspace");
+    },
+    '5.Type in input "Zipcode"': function() {
+        act.type("#locay", "657");
+    },
+    "6.Click div": function() {
+        act.click("body > div:nth(2)");
+    },
+    "7.Click div": function() {
+        act.click("body > div:nth(2)");
+    },
+    '8.Click span "Go"': function() {
+        act.click(":containsExcludeChildren(Go)");
+    },
+    '9.Click span "Results!"': function() {
+        var actionTarget = function() {
+            return $("#get").find(":containsExcludeChildren(Results)");
+        };
+        act.click(actionTarget);
+    },
+    '10.Click span "Show next..."': function() {
+        act.click(":containsExcludeChildren(Show next restaurant)");
+    },
+    '11.Click span "Show next..."': function() {
+        act.click(":containsExcludeChildren(Show next restaurant)");
+    },
+    '12.Click span "Search again!"': function() {
+        act.click(":containsExcludeChildren(Search again)");
+    }
+};
+
+"@test"["two searches + yelp click"] = {
+    "1.Click submit button": function() {
+        act.click("#FF");
+    },
+    '2.Click span "$"': function() {
+        act.click("body > div:nth(1) > div:nth(0) > div:nth(1) > button:nth(0) > span:nth(0)");
+    },
+    '3.Click span "High"': function() {
+        act.click(":containsExcludeChildren(High)");
+    },
+    '4.Click span "25mi"': function() {
+        act.click(":containsExcludeChildren(25mi)");
+    },
+    '5.Type in input "Zipcode"': function() {
+        act.type("#locay", "93301");
+    },
+    '6.Rclick span "Go"': function() {
+        act.rclick(":containsExcludeChildren(Go)");
+    },
+    "7.Click list item": function() {
+        var actionTarget = function() {
+            return $(".category").find(" > ul:nth(0) > li:nth(0)");
+        };
+        act.click(actionTarget);
+    },
+    '8.Click span "Fast Food"': function() {
+        act.click(":containsExcludeChildren(Fast Food)");
+    },
+    "9.Click submit button": function() {
+        var actionTarget = function() {
+            return $(".riskfactor").find(" > button:nth(0)");
+        };
+        act.click(actionTarget);
+    },
+    "10.Click button": function() {
+        act.click("#output");
+    },
+    '11.Click span "Results!"': function() {
+        var actionTarget = function() {
+            return $("#get").find(":containsExcludeChildren(Results)");
+        };
+        act.click(actionTarget);
+    },
+    '12.Click span "Show next..."': function() {
+        handleAlert();
+        act.click(":containsExcludeChildren(Show next restaurant)");
+    },
+    '13.Click span "Search again!"': function() {
+        act.click(":containsExcludeChildren(Search again)");
+    },
+    '14.Click span "Dine In"': function() {
+        act.click(":containsExcludeChildren(Dine In)");
+    },
+    '15.Click span "$$"': function() {
+        act.click("body > div:nth(1) > div:nth(0) > div:nth(1) > button:nth(1) > span:nth(0)");
+    },
+    '16.Type in input "Zipcode"': function() {
+        act.type("#locay", "93657");
+    },
+    '17.Click span "Med."': function() {
+        act.click(":containsExcludeChildren(Med)");
+    },
+    '18.Click span "20mi"': function() {
+        act.click(":containsExcludeChildren(20mi)");
+    },
+    "19.Click button": function() {
+        act.click("#output");
+    },
+    '20.Click span "Results!"': function() {
+        var actionTarget = function() {
+            return $("#get").find(":containsExcludeChildren(Results)");
+        };
+        act.click(actionTarget);
+    },
+    '21.Click span "Show next..."': function() {
+        act.click(":containsExcludeChildren(Show next restaurant)");
+    },
+    '22.Click <b> "Click here"': function() {
+        act.click(":containsExcludeChildren(Click here)");
+    }
+};
+
+"@test"["Only Food type"] = {
+    "1.Click submit button": function() {
+        act.click("#FF");
+    },
+    '2.Click span "Go"': function() {
+        act.click(":containsExcludeChildren(Go)");
+    },
+    '3.Click span "Results!"': function() {
+        var actionTarget = function() {
+            return $("#get").find(":containsExcludeChildren(Results)");
+        };
+        act.click(actionTarget);
+    },
+    '4.Click span "Results!"': function() {
+        var actionTarget = function() {
+            return $("#get").find(":containsExcludeChildren(Results)");
+        };
+        act.click(actionTarget);
+    }
+};
+
+"@test"["Only Price"] = {
+    '1.Click span "$$"': function() {
+        act.click("body > div:nth(1) > div:nth(0) > div:nth(1) > button:nth(1) > span:nth(0)");
+    },
+    '2.Click span "Go"': function() {
+        act.click(":containsExcludeChildren(Go)");
+    },
+    '3.Click span "Results!"': function() {
+        var actionTarget = function() {
+            return $("#get").find(":containsExcludeChildren(Results)");
+        };
+        act.click(actionTarget);
+    },
+    "4.Drag <h2> \"Click 'Results' to...\"": function() {
+        act.drag("#head1", 58, 1, {
+            offsetX: 544,
+            offsetY: 12
+        });
+    },
+    '5.Click span "Results!"': function() {
+        var actionTarget = function() {
+            return $("#get").find(":containsExcludeChildren(Results)");
+        };
+        act.click(actionTarget);
+    }
+};
+
+"@test"["Only risk factor"] = {
+    '1.Click span "High"': function() {
+        act.click(":containsExcludeChildren(High)");
+    },
+    '2.Click span "Go"': function() {
+        act.click(":containsExcludeChildren(Go)");
+    },
+    '3.Click span "Results!"': function() {
+        var actionTarget = function() {
+            return $("#get").find(":containsExcludeChildren(Results)");
+        };
+        act.click(actionTarget);
+    },
+    '4.Click span "Results!"': function() {
+        var actionTarget = function() {
+            return $("#get").find(":containsExcludeChildren(Results)");
+        };
+        act.click(actionTarget);
+    }
+};
+
+"@test"["Only Radius"] = {
+    '1.Click span "25mi"': function() {
+        act.click(":containsExcludeChildren(25mi)");
+    },
+    "2.Click div": function() {
+        act.click("body > div:nth(2)");
+    },
+    '3.Click span "Go"': function() {
+        act.click(":containsExcludeChildren(Go)");
+    },
+    '4.Click span "Results!"': function() {
+        var actionTarget = function() {
+            return $("#get").find(":containsExcludeChildren(Results)");
+        };
+        act.click(actionTarget);
+    }
+};
+
+"@test"["Only zipcode"] = {
+    '1.Type in input "Zipcode"': function() {
+        act.type("#locay", "93657");
+    },
+    '2.Click span "Go"': function() {
+        act.click(":containsExcludeChildren(Go)");
+    },
+    '3.Click span "Results!"': function() {
+        var actionTarget = function() {
+            return $("#get").find(":containsExcludeChildren(Results)");
+        };
+        act.click(actionTarget);
+    },
+    '4.Click span "Show next..."': function() {
+        act.click(":containsExcludeChildren(Show next restaurant)");
+    },
+    '5.Click span "Show next..."': function() {
+        act.click(":containsExcludeChildren(Show next restaurant)");
+    },
+    '6.Click span "Search again!"': function() {
+        act.click(":containsExcludeChildren(Search again)");
+    }
+};
+
+"@test"["Wrong zipcode"] = {
+    "1.Click <h1>": function() {
+        var actionTarget = function() {
+            return $(".zipcode").find(" > h1:nth(1)");
+        };
+        act.click(actionTarget);
+    },
+    '2.Type in input "Zipcode"': function() {
+        act.type("#locay", "9999999999999");
+    },
+    '3.Click span "$$"': function() {
+        act.click("body > div:nth(1) > div:nth(0) > div:nth(1) > button:nth(1) > span:nth(0)");
+    },
+    '4.Click span "Fast Food"': function() {
+        act.click(":containsExcludeChildren(Fast Food)");
+    },
+    '5.Click span "High"': function() {
+        act.click(":containsExcludeChildren(High)");
+    },
+    '6.Click span "25mi"': function() {
+        act.click(":containsExcludeChildren(25mi)");
+    },
+    '7.Click span "Go"': function() {
+        act.click(":containsExcludeChildren(Go)");
+    },
+    '8.Click span "Results!"': function() {
+        var actionTarget = function() {
+            return $("#get").find(":containsExcludeChildren(Results)");
+        };
+        act.click(actionTarget);
+    },
+    '9.Click span "Results!"': function() {
+        var actionTarget = function() {
+            return $("#get").find(":containsExcludeChildren(Results)");
+        };
+        act.click(actionTarget);
+    }
+};
+
